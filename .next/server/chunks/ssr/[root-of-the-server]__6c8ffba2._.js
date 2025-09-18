@@ -26,6 +26,7 @@ module.exports = mod;
 "[project]/app/week-2/student-info.js [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
+//student info page
 __turbopack_context__.s([
     "default",
     ()=>StudentInfo
@@ -37,13 +38,14 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 function StudentInfo() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "bg-black-200 border-2 border-blue-500 p-4 rounded-lg inline-block",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                 className: " font-bold text-red-600",
                 children: "Student Info"
             }, void 0, false, {
                 fileName: "[project]/app/week-2/student-info.js",
-                lineNumber: 8,
+                lineNumber: 11,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -53,14 +55,14 @@ function StudentInfo() {
                         children: "Name:"
                     }, void 0, false, {
                         fileName: "[project]/app/week-2/student-info.js",
-                        lineNumber: 10,
+                        lineNumber: 13,
                         columnNumber: 9
                     }, this),
                     " Tessa Rae Feyres"
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/week-2/student-info.js",
-                lineNumber: 9,
+                lineNumber: 12,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -70,30 +72,30 @@ function StudentInfo() {
                         children: "GitHub Repository:"
                     }, void 0, false, {
                         fileName: "[project]/app/week-2/student-info.js",
-                        lineNumber: 13,
+                        lineNumber: 16,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                        href: "https://www.youtube.com/watch?v=rMmziyTS3YI",
+                        href: "https://github.com/TessaFey/cprg306-assignments",
                         //Placeholder link for now
                         className: "text-blue-600 hover:underline",
                         target: "_blank",
                         children: "GitHub Repo"
                     }, void 0, false, {
                         fileName: "[project]/app/week-2/student-info.js",
-                        lineNumber: 14,
+                        lineNumber: 17,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/week-2/student-info.js",
-                lineNumber: 12,
+                lineNumber: 15,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/week-2/student-info.js",
-        lineNumber: 7,
+        lineNumber: 9,
         columnNumber: 5
     }, this);
 }

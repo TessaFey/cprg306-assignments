@@ -2,10 +2,12 @@
 @layer properties {
   @supports (((-webkit-hyphens: none)) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
     *, :before, :after {
+      --tw-border-style: solid;
       --tw-font-weight: initial;
     }
 
     ::backdrop {
+      --tw-border-style: solid;
       --tw-font-weight: initial;
     }
   }
@@ -15,11 +17,17 @@
   :root, :host {
     --color-red-600: #e40014;
     --color-red-700: #bf000f;
+    --color-yellow-800: #874b00;
+    --color-blue-200: #bedbff;
+    --color-blue-500: #3080ff;
     --color-blue-600: #155dfc;
+    --color-black: #000;
+    --spacing: .25rem;
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
     --font-weight-medium: 500;
     --font-weight-bold: 700;
+    --radius-lg: .5rem;
     --default-font-family: var(--font-geist-sans);
     --default-mono-font-family: var(--font-geist-mono);
   }
@@ -28,6 +36,9 @@
     :root, :host {
       --color-red-600: color(display-p3 .830323 .140383 .133196);
       --color-red-700: color(display-p3 .692737 .116232 .104679);
+      --color-yellow-800: color(display-p3 .503181 .30478 .075537);
+      --color-blue-200: color(display-p3 .76688 .855207 .987483);
+      --color-blue-500: color(display-p3 .266422 .491219 .988624);
       --color-blue-600: color(display-p3 .174493 .358974 .950247);
     }
   }
@@ -36,6 +47,9 @@
     :root, :host {
       --color-red-600: lab(48.4493% 77.4328 61.5452);
       --color-red-700: lab(40.4273% 67.2623 53.7441);
+      --color-yellow-800: lab(38.7484% 23.5833 51.4916);
+      --color-blue-200: lab(86.15% -4.04379 -21.0797);
+      --color-blue-500: lab(54.1736% 13.3368 -74.6839);
       --color-blue-600: lab(44.0605% 29.0279 -86.0352);
     }
   }
@@ -389,6 +403,39 @@
 @layer components;
 
 @layer utilities {
+  .inline-block {
+    display: inline-block;
+  }
+
+  .rounded-lg {
+    border-radius: var(--radius-lg);
+  }
+
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
+
+  .border-blue-500 {
+    border-color: var(--color-blue-500);
+  }
+
+  .border-yellow-800 {
+    border-color: var(--color-yellow-800);
+  }
+
+  .bg-black {
+    background-color: var(--color-black);
+  }
+
+  .bg-blue-200 {
+    background-color: var(--color-blue-200);
+  }
+
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
+
   .text-lg {
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
@@ -445,6 +492,12 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 
 @property --tw-font-weight {
