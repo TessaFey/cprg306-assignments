@@ -115,6 +115,7 @@
     --color-blue-600: #155dfc;
     --color-black: #000;
     --spacing: .25rem;
+    --container-md: 28rem;
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
     --font-weight-medium: 500;
@@ -497,6 +498,14 @@
 @layer utilities {
   .inline-block {
     display: inline-block;
+  }
+
+  .w-full {
+    width: 100%;
+  }
+
+  .max-w-md {
+    max-width: var(--container-md);
   }
 
   .rounded-lg {
