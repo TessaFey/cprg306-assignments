@@ -10,7 +10,7 @@ export default function StudentInfo() {
         <strong>Name:</strong> Tessa Rae Feyres
       </p>
       <div>
-        <p className="text-lg font-medium text-gray-700 mb-2">GitHub Repository:</p>
+        <p className="text-lg font-medium text-red-700">GitHub Repository:</p>
         <Link
           href="https://www.youtube.com/watch?v=rMmziyTS3YI"
           //Placeholder link for now
