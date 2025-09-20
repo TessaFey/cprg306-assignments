@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
-    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["file:///D:/cprg306/cprg306-assignments/app/week-2/page.js"],"sourcesContent":["export default function Page() {\nreturn (\n<main>\n<h1>Shopping List</h1>\n</main>\n);\n}"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACxB,qBACA,8OAAC;kBACD,cAAA,8OAAC;sBAAG;;;;;;;;;;;AAGJ","debugId":null}}]
-}
