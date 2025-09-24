@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["file:///D:/cprg306/cprg306-assignments/app/page.js"],"sourcesContent":["// Root/Home page\nimport Link from \"next/link\";\n\nexport default function Home() {\n  return (\n    <div>\n      <h1 className=\" font-bold text-red-600\">CPRG 306: Web Development 2 - Assignments</h1>\n      <div>\n      <Link\n          href=\"/week-2\"\n          className=\"text-blue-600 hover:underline\"\n          target=\"_blank\"\n        >\n        week-2\n        </Link>\n        </div>\n        <div>\n        <Link\n          href=\"/week-3\"\n          className=\"text-blue-600 hover:underline\"\n          target=\"_blank\"\n        >\n        week-3\n        </Link>\n        </div>\n    </div>\n    \n  );\n}\n"],"names":[],"mappings":"AAAA,iBAAiB;;;;;;AACjB;;;AAEe,SAAS;IACtB,qBACE,8OAAC;;0BACC,8OAAC;gBAAG,WAAU;0BAA0B;;;;;;0BACxC,8OAAC;0BACD,cAAA,8OAAC,uKAAI;oBACD,MAAK;oBACL,WAAU;oBACV,QAAO;8BACR;;;;;;;;;;;0BAID,8OAAC;0BACD,cAAA,8OAAC,uKAAI;oBACH,MAAK;oBACL,WAAU;oBACV,QAAO;8BACR;;;;;;;;;;;;;;;;;AAOT","debugId":null}}]
+}
