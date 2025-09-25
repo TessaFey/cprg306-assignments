@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["file:///D:/cprg306/cprg306-assignments/app/week-3/page.js"],"sourcesContent":["//Wee 3 landing page\n\n// import ItemList from \"./item-list\";\n\nexport default function Page() {\n  return (\n    <main className=\" bg-gray-900\">\n      <h1 className=\"bg-gray-900\">Shopping List</h1>\n      <ItemList></ItemList>\n    </main>\n  );\n}"],"names":[],"mappings":"AAAA,oBAAoB;AAEpB,sCAAsC;;;;;;;AAEvB,SAAS;IACtB,qBACE,8OAAC;QAAK,WAAU;;0BACd,8OAAC;gBAAG,WAAU;0BAAc;;;;;;0BAC5B,8OAAC;;;;;;;;;;;AAGP","debugId":null}}]
+}
