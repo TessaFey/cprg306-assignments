@@ -1,5 +1,5 @@
 import Item from "./items";
-
+// Items
 export default function ItemList() {
   const items = [
     { name: "Mango", quantity: 2, category: "Fruit" },
@@ -10,11 +10,12 @@ export default function ItemList() {
   ];
   return (
     <ul className="">
-      {items.map((item) => (
+      {items.map((item, index) => (
         <Item
-          name={item.name}
-          quantity={item.quantity}
-          category={item.category}
+            key={index}
+            name={item.name}
+            quantity={item.quantity}
+            category={item.category}
         />
       ))}
     </ul>
