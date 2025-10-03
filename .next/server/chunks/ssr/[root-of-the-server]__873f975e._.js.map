@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///D:/cprg306/cprg306-assignments/app/week-4/page.js"],"sourcesContent":["//Week 4 landing page\n\nimport NewItem from \"./new-items\";\n\nexport default function Page() {\n  return (\n    <main className=\"min-h-screen flex items-center justify-center p-8 bg-gray-50\">\n      <div className=\"w-full max-w-md\">\n        <h1 className=\"text-2xl font-bold mb-6\">Week 4 — New Item</h1>\n        <NewItem />\n      </div>\n    </main>\n  );\n}"],"names":[],"mappings":"AAAA,qBAAqB;;;;;;AAErB;;;AAEe,SAAS;IACtB,qBACE,8OAAC;QAAK,WAAU;kBACd,cAAA,8OAAC;YAAI,WAAU;;8BACb,8OAAC;oBAAG,WAAU;8BAA0B;;;;;;8BACxC,8OAAC,2IAAO;;;;;;;;;;;;;;;;AAIhB","debugId":null}}]
+}
