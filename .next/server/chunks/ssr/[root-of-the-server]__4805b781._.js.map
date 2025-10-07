@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 21, "column": 0}, "map": {"version":3,"sources":["file:///D:/cprg306/cprg306-assignments/app/week-5/page.js"],"sourcesContent":["//Week 5 landing page\n\nimport NewItem from \"./new-items\";\n\nexport default function Page() {\n  return (\n    <main className=\" bg-black\">\n      <div className=\"bg-black border-2 border-blue-500 p-4 rounded-lg inline-block\">\n        <NewItem />\n      </div>\n    </main>\n  );\n}"],"names":[],"mappings":"AAAA,qBAAqB;;;;;;AAErB;;;AAEe,SAAS;IACtB,qBACE,8OAAC;QAAK,WAAU;kBACd,cAAA,8OAAC;YAAI,WAAU;sBACb,cAAA,8OAAC,2IAAO;;;;;;;;;;;;;;;AAIhB","debugId":null}}]
+}
