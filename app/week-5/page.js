@@ -2,12 +2,12 @@
 
 import NewItem from "./new-items";
 
+
 export default function Page() {
   return (
-    <main className=" bg-black">
-      <div className="bg-black border-2 border-blue-500 p-4 rounded-lg inline-block">
-        <NewItem />
-      </div>
+    <main className="p-6">
+      <h1 className="text-2xl font-bold mb-4">Add a New Item</h1>
+      <NewItem />
     </main>
   );
 }
