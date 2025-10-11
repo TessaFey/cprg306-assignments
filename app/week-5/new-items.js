@@ -11,17 +11,20 @@ export default function NewItem() {
 
   
   // increment
-  const increment = () => {
+  const increment = (e) => {
+  e.preventDefault();
     setQuantity((q) => Math.min(q + 1, 20));
   };
 
   // decrement
-  const decrement = () => {
+  const decrement = (e) => {
+  e.preventDefault();
     setQuantity((q) => Math.max(q - 1, 1));
   };
 
   // Handle form submission
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+  e.preventDefault();
 
     
 
@@ -58,7 +61,7 @@ export default function NewItem() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring focus:ring-blue-300"
+          className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring focus:ring-blue-300 text-white"
         />
       </div>
 
