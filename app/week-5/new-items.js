@@ -52,7 +52,7 @@ export default function NewItem() {
       className="max-w-lg mx-auto bg-black p-6 rounded-2xl shadow-lg space-y-4 border-blue-700"
     >
       <div>
-        <label className="block mb-1 font-semibold">Name:</label>
+        <label className="block mb-1 font-semibold text-white">Name:</label>
         <input
           type="text"
           value={name}
@@ -65,19 +65,19 @@ export default function NewItem() {
       
       <div className="bg-black">
       <div>
-        <label className="block mb-1 font-semibold">Quantity:</label>
+        <label className="block mb-1 font-semibold text-white">Quantity:</label>
       </div>
       <div className="flex items-center gap-2">
         <button
           onClick={decrement}
           disabled={quantity === 1}
-          className={`px-2 py-2 border text-lg
-            ${quantity === 1 ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-800"}`}
+          className={`px-2 py-2 border text-lg text-white
+            ${quantity === 1 ? "opacity-50 cursor-not-allowed" : "hover:bg-blue-300"}`}
         >
           −
         </button>
 
-        <div className="min-w-[56px] text-center">
+        <div className="min-w-[56px] text-center text-white">
           <span className="text-2xl font-bold">{quantity}</span>
           
         </div>
@@ -85,8 +85,8 @@ export default function NewItem() {
         <button
           onClick={increment}
           disabled={quantity === 20}
-          className={`px-2 py-2 border text-lg
-            ${quantity === 20 ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-800"}`}
+          className={`px-2 py-2 border text-lg text-white
+            ${quantity === 20 ? "opacity-50 cursor-not-allowed" : "hover:bg-blue-300"}`}
         >
           +
         </button>
@@ -96,7 +96,7 @@ export default function NewItem() {
 
     
       <div>
-        <label className="block mb-1 font-semibold">Category:</label>
+        <label className="block mb-1 font-semibold text-white">Category:</label>
         <select
           value={category}
           onChange={(e) => setCategory(e.target.value)}
@@ -116,7 +116,7 @@ export default function NewItem() {
         </select>
       </div>
 
-      {/* Submit Button */}
+      {}
       <button
         type="submit"
         className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
