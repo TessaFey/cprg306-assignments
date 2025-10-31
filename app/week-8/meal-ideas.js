@@ -16,12 +16,6 @@ return data.meals || [];
 
 export default function MealIdeas({ ingredient }) {
     const [meals, setMeals] = useState([]);
-    return (
-        <div>
-            <h3>Ideas for Meals</h3>
-            <p>Ingredient: {ingredient}</p>
-        </div>
-    );
 
 async function loadIdeas() {
     const listOfMeals = await getIdeas(ingredient); 
@@ -29,11 +23,11 @@ async function loadIdeas() {
 }
 
 useEffect(function changeIngredient() {
-    getIdeas();
+    loadIdeas();
 }, [ingredient]);
 
 return (
-    <div>
+    <div className="p-4 bg-black text-white rounded-lg w-full max-w-md">
       <h2>Meal Ideas</h2>
       {!ingredient && <p>Select an item to see meal ideas.</p>}
       {ingredient && meals.length === 0 && <p>No meals found for {ingredient}.</p>}

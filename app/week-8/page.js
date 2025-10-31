@@ -29,8 +29,10 @@ function itemSelect(item) {
       <div className="mb-6 w-full max-w-md">
         <NewItem onAddItem={addItem} />
       </div>
-
-      <ItemList items={items} onItemSelect={itemSelect} />
+      <div className="flex flex-col md:flex-row gap-6 w-full justify-center">
+        <ItemList items={items} onItemSelect={itemSelect} />
+        <MealIdeas ingredient={selectedItemName} />
+      </div>
     </main>
   );
 }

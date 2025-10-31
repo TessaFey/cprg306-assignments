@@ -160,12 +160,17 @@ function NewItem(param) {
     const [name, setName] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [quantity, setQuantity] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(1);
     const [category, setCategory] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("produce");
+    function increment() {
+        if (quantity < 20) setQuantity(quantity + 1);
+    }
+    function decrement() {
+        if (quantity > 1) setQuantity(quantity - 1);
+    }
     function handleSubmit(e) {
         e.preventDefault();
         const newItem = {
             id: Math.random().toString(36).substring(2, 9),
             name: name.trim(),
-            quantity: parseInt(quantity),
             category
         };
         onAddItem(newItem);
@@ -175,7 +180,7 @@ function NewItem(param) {
     }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
         onSubmit: handleSubmit,
-        className: "flex flex-col gap-3 bg-black p-4 rounded shadow",
+        className: "flex flex-col gap-3 bg-black text-white p-4 rounded shadow",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                 className: "border rounded p-2 bg-black text-white hover:bg-black",
@@ -186,19 +191,53 @@ function NewItem(param) {
                 required: true
             }, void 0, false, {
                 fileName: "[project]/app/week-8/new-item.js",
-                lineNumber: 28,
+                lineNumber: 34,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                className: "border rounded p-2 bg-black text-white hover:bg-black",
-                type: "number",
-                min: "1",
-                value: quantity,
-                onChange: (e)=>setQuantity(e.target.value),
-                required: true
-            }, void 0, false, {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "flex items-center justify-center gap-2",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        type: "button",
+                        onClick: decrement,
+                        disabled: quantity === 1,
+                        className: "px-2 py-2 border text-lg ".concat(quantity === 1 ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-800"),
+                        children: "−"
+                    }, void 0, false, {
+                        fileName: "[project]/app/week-8/new-item.js",
+                        lineNumber: 44,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "min-w-[56px] text-center",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                            className: "text-2xl font-bold",
+                            children: quantity
+                        }, void 0, false, {
+                            fileName: "[project]/app/week-8/new-item.js",
+                            lineNumber: 58,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/app/week-8/new-item.js",
+                        lineNumber: 57,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                        type: "button",
+                        onClick: increment,
+                        disabled: quantity === 20,
+                        className: "px-2 py-2 border text-lg ".concat(quantity === 20 ? "opacity-50 cursor-not-allowed" : "hover:bg-gray-800"),
+                        children: "+"
+                    }, void 0, false, {
+                        fileName: "[project]/app/week-8/new-item.js",
+                        lineNumber: 61,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "[project]/app/week-8/new-item.js",
-                lineNumber: 37,
+                lineNumber: 43,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -211,7 +250,7 @@ function NewItem(param) {
                         children: "Produce"
                     }, void 0, false, {
                         fileName: "[project]/app/week-8/new-item.js",
-                        lineNumber: 51,
+                        lineNumber: 80,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -219,7 +258,7 @@ function NewItem(param) {
                         children: "Dairy"
                     }, void 0, false, {
                         fileName: "[project]/app/week-8/new-item.js",
-                        lineNumber: 52,
+                        lineNumber: 81,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -227,7 +266,7 @@ function NewItem(param) {
                         children: "Bakery"
                     }, void 0, false, {
                         fileName: "[project]/app/week-8/new-item.js",
-                        lineNumber: 53,
+                        lineNumber: 82,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -235,7 +274,7 @@ function NewItem(param) {
                         children: "Meat"
                     }, void 0, false, {
                         fileName: "[project]/app/week-8/new-item.js",
-                        lineNumber: 54,
+                        lineNumber: 83,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -243,7 +282,7 @@ function NewItem(param) {
                         children: "Dry Goods"
                     }, void 0, false, {
                         fileName: "[project]/app/week-8/new-item.js",
-                        lineNumber: 55,
+                        lineNumber: 84,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -251,7 +290,7 @@ function NewItem(param) {
                         children: "Canned Goods"
                     }, void 0, false, {
                         fileName: "[project]/app/week-8/new-item.js",
-                        lineNumber: 56,
+                        lineNumber: 85,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -259,13 +298,13 @@ function NewItem(param) {
                         children: "Household"
                     }, void 0, false, {
                         fileName: "[project]/app/week-8/new-item.js",
-                        lineNumber: 57,
+                        lineNumber: 86,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/week-8/new-item.js",
-                lineNumber: 46,
+                lineNumber: 75,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -274,13 +313,13 @@ function NewItem(param) {
                 children: "Add Item"
             }, void 0, false, {
                 fileName: "[project]/app/week-8/new-item.js",
-                lineNumber: 60,
+                lineNumber: 89,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/week-8/new-item.js",
-        lineNumber: 24,
+        lineNumber: 30,
         columnNumber: 5
     }, this);
 }
@@ -320,37 +359,62 @@ function MealIdeas(param) {
     let { ingredient } = param;
     _s();
     const [meals, setMeals] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                children: "Ideas for Meals"
-            }, void 0, false, {
-                fileName: "[project]/app/week-8/meal-ideas.js",
-                lineNumber: 21,
-                columnNumber: 13
-            }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                children: [
-                    "Ingredient: ",
-                    ingredient
-                ]
-            }, void 0, true, {
-                fileName: "[project]/app/week-8/meal-ideas.js",
-                lineNumber: 22,
-                columnNumber: 13
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "[project]/app/week-8/meal-ideas.js",
-        lineNumber: 20,
-        columnNumber: 9
-    }, this);
-    //TURBOPACK unreachable
-    ;
     async function loadIdeas() {
         const listOfMeals = await getIdeas(ingredient);
         setMeals(listOfMeals);
     }
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])(function changeIngredient() {
+        loadIdeas();
+    }, [
+        ingredient
+    ]);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "p-4 bg-black text-white rounded-lg w-full max-w-md",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                children: "Meal Ideas"
+            }, void 0, false, {
+                fileName: "[project]/app/week-8/meal-ideas.js",
+                lineNumber: 31,
+                columnNumber: 7
+            }, this),
+            !ingredient && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                children: "Select an item to see meal ideas."
+            }, void 0, false, {
+                fileName: "[project]/app/week-8/meal-ideas.js",
+                lineNumber: 32,
+                columnNumber: 23
+            }, this),
+            ingredient && meals.length === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                children: [
+                    "No meals found for ",
+                    ingredient,
+                    "."
+                ]
+            }, void 0, true, {
+                fileName: "[project]/app/week-8/meal-ideas.js",
+                lineNumber: 33,
+                columnNumber: 44
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                children: meals.map((meal)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                        children: meal.strMeal
+                    }, meal.idMeal, false, {
+                        fileName: "[project]/app/week-8/meal-ideas.js",
+                        lineNumber: 36,
+                        columnNumber: 11
+                    }, this))
+            }, void 0, false, {
+                fileName: "[project]/app/week-8/meal-ideas.js",
+                lineNumber: 34,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/app/week-8/meal-ideas.js",
+        lineNumber: 30,
+        columnNumber: 5
+    }, this);
 }
 _s(MealIdeas, "an3554G5PYiaii/PlvHt6YA7hZs=");
 _c = MealIdeas;
@@ -422,12 +486,28 @@ function Page() {
                 lineNumber: 29,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$week$2d$8$2f$item$2d$list$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                items: items,
-                onItemSelect: itemSelect
-            }, void 0, false, {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "flex flex-col md:flex-row gap-6 w-full justify-center",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$week$2d$8$2f$item$2d$list$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                        items: items,
+                        onItemSelect: itemSelect
+                    }, void 0, false, {
+                        fileName: "[project]/app/week-8/page.js",
+                        lineNumber: 33,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$week$2d$8$2f$meal$2d$ideas$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                        ingredient: selectedItemName
+                    }, void 0, false, {
+                        fileName: "[project]/app/week-8/page.js",
+                        lineNumber: 34,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
                 fileName: "[project]/app/week-8/page.js",
-                lineNumber: 33,
+                lineNumber: 32,
                 columnNumber: 7
             }, this)
         ]
